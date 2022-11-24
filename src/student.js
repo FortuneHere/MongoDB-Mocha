@@ -4,6 +4,7 @@ const Schema = mongose.Schema;
 // Создаем схему для модели
 const StudentSchema = new Schema({
   name: String,
+  studentNumber: Number,
 });
 
 // Создаем саму модель
