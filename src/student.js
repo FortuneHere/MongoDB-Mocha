@@ -1,5 +1,6 @@
 const mongose = require('mongoose');
 const Schema = mongose.Schema;
+const ArticleSchema = require('./article_schema');
 
 // Создаем схему для модели
 const StudentSchema = new Schema({
@@ -16,6 +17,7 @@ const StudentSchema = new Schema({
   studentNumber: Number,
   articleCount: Number,
   grade: Number,
+  articles : [ArticleSchema]
 });
 
 // Создаем саму модель
