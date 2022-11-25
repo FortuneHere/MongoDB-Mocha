@@ -15,10 +15,13 @@ const StudentSchema = new Schema({
     }
   },
   studentNumber: Number,
-  articleCount: Number,
   grade: Number,
   articles : [ArticleSchema]
 });
+
+StudentSchema.virtual('articleCount').get(function() {
+  return this.articles.length
+})
 
 // Создаем саму модель
 const Student = mongose.model('student', StudentSchema);
