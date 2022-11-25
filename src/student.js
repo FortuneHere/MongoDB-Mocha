@@ -17,7 +17,7 @@ const StudentSchema = new Schema({
   studentNumber: Number,
   grade: Number,
   articles : [ArticleSchema],
-  ArticleBlog: [{
+  articleBlog: [{
     type: Schema.Types.ObjectId,
     ref: 'articleBlog'
   }]
